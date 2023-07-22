@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://someurl';
+const mongoURI = process.env.mongoURI;
 
 const mongoDB = async () => {
     try {
