@@ -4,11 +4,15 @@ export default function Card(props) {
     let options = props.options;
     let priceOptions = Object.keys(options);
 
+    const handleAddtocart = () => {
+
+    }
+
     return (
         <div>
             <div>
                 <div className="card mt-3" style={{ "width": "18rem", "maxHeight": "360px" }}>
-                    <img src={props.image} className="card-img-top" alt={props.foodName} />
+                    <img src={props.image} className="card-img-top" alt={props.foodName} style={{ height: '130px', objectFit: 'cover' }} />
                     <div className="card-body">
                         <h5 className="card-title">{props.foodName}</h5>
                         <div className="container w-100">
@@ -26,6 +30,8 @@ export default function Card(props) {
                             </select>
                             <div className="d-inline h-100 fs-5">Total price</div>
                         </div>
+                        <hr />
+                        <button className={`btn btn-success justify-center ms-2`} onClick={handleAddtocart}>Add to Cart</button>
                     </div>
                 </div>
             </div>
