@@ -29,14 +29,14 @@ export default function Cart() {
                     </thead>
                     <tbody>
                         {data.map((food, index) => (
-                            <tr>
+                            <tr key={index}>
                                 <th scope='row' >{index + 1}</th>
                                 <td>{food.name}</td>
                                 <td>{food.qty}</td>
                                 <td>{food.size}</td>
                                 <td>{food.price}</td>
                                 <td>
-                                    <button type="button" className="btn p-0"><Delete onClick={() => { dispatch({ type: "REMOVE", index: index }) }} /></button>
+                                    <button type="button" className="btn bg-danger p-e-2" onClick={() => { dispatch({ type: "REMOVE", index: index }) }}>Delete</button>
                                 </td>
                             </tr>
                         ))}
