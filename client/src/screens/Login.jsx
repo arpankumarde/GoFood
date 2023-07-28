@@ -30,6 +30,7 @@ export default function Login() {
     if (!databack.success) {
       alert("Enter valid credentials!")
     } else {
+      localStorage.setItem('userEmail', cred.email)
       localStorage.setItem('authToken', databack.authToken)
       navigate('/')
     }
