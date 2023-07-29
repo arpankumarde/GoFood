@@ -26,7 +26,6 @@ export default function Login() {
       })
     });
     const databack = await response.json();
-    console.log(databack);
     if (!databack.success) {
       alert("Enter valid credentials!")
     } else {

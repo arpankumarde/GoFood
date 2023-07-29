@@ -21,7 +21,6 @@ router.post('/orderdata', async (req, res) => {
         } catch (error) {
             console.log(error.message)
             res.send("Server Error", error.message)
-
         }
     }
 
@@ -35,6 +34,17 @@ router.post('/orderdata', async (req, res) => {
             console.log(error.message)
             res.send("Server Error", error.message)
         }
+    }
+})
+
+
+router.post('/myorderdata', async (req, res) => {
+    try {
+        let myOrderData = await Order.findOne({ 'email': req.body.email });
+        res.json({ orderData: myOrderData })
+    } catch (error) {
+        console.log(error.message)
+        res.send("Server Error", error.message)
     }
 })
 
