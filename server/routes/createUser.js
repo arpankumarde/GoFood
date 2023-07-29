@@ -50,7 +50,6 @@ router.post('/loginuser',
 
         try {
             let userData = await User.findOne({ email: req.body.email });
-            // console.log(userData);
 
             const passCompare = await bcrypt.compare(req.body.pass, userData.password);
             if (!userData || !passCompare) {

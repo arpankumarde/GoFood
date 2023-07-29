@@ -15,7 +15,7 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:3000/api/loginuser', {
+    const response = await fetch(`${import.meta.env.VITE_SERVER}/api/loginuser`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

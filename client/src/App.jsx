@@ -9,7 +9,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { CartProvider } from './components/ContextReducer';
 
 function App() {
-
   return (
     <CartProvider>
       <Router>

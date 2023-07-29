@@ -14,7 +14,7 @@ export default function Cart() {
     let totalPrice = data.reduce((total, food) => total + food.price, 0)
     const handleCheckout = async () => {
         let userEmail = localStorage.getItem('userEmail');
-        let response = await fetch("http://localhost:3000/api/orderdata", {
+        let response = await fetch(`${import.meta.env.VITE_SERVER}/api/orderdata`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
