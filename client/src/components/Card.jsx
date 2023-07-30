@@ -41,8 +41,8 @@ export default function Card(props) {
     return (
         <div>
             <div>
-                <div className="card mt-3" style={{ "width": "18rem", "maxHeight": "360px" }}>
-                    <img src={props.foodItem.img} className="card-img-top" alt={props.foodItem.name} style={{ height: '130px', objectFit: 'cover' }} />
+                <div className="card mt-4" style={{ "width": "18rem", "maxHeight": "380px" }}>
+                    <img src={props.foodItem.img} className="card-img-top" alt={props.foodItem.name} style={{ height: '180px', objectFit: 'cover' }} />
                     <div className="card-body">
                         <h5 className="card-title">{props.foodItem.name}</h5>
                         <div className="container w-100">
@@ -61,7 +61,7 @@ export default function Card(props) {
                             <div className="d-inline h-100 fs-5">₹{finalPrice}/-</div>
                         </div>
                         <hr />
-                        <button className={`btn btn-success justify-center ms-2`} onClick={handleAddtocart}>Add to Cart</button>
+                        <button type='button' className={`btn btn-success justify-center ms-2`} onClick={handleAddtocart}>Add to Cart</button>
                     </div>
                 </div>
             </div>

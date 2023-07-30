@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT
 require('dotenv').config()
+const port = process.env.PORT
 const mongoDB = require('./db')
 
 mongoDB();
