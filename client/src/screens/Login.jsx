@@ -43,12 +43,12 @@ export default function Login() {
       <div className="container mt-4">
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-            <input type="email" name='email' value={cred.email} onChange={handleChange} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+            <label htmlFor="InputEmail" className="form-label">Email address</label>
+            <input type="email" name='email' value={cred.email} onChange={handleChange} className="form-control" id="InputEmail" aria-describedby="emailHelp" required />
           </div>
           <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-            <input type="password" name='pass' value={cred.pass} onChange={handleChange} className="form-control" id="exampleInputPassword1" required />
+            <label htmlFor="InputPassword" className="form-label">Password</label>
+            <input type="password" name='pass' value={cred.pass} onChange={handleChange} className="form-control" id="InputPassword" required />
           </div>
           <button type="submit" className="m-3 ms-0 btn btn-success">Login</button>
           <Link to='/signup' className='m-3 btn btn-danger'>New user?</Link>

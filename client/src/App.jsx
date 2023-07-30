@@ -1,12 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './screens/Home';
-import Signup from './screens/Signup';
-import Login from './screens/Login';
-import MyOrder from './screens/MyOrder';
+import { Home, Signup, Login, MyOrder } from './screens'
+import { CartProvider } from './components';
 import 'bootstrap-dark-5/dist/css/bootstrap-dark.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { CartProvider } from './components/ContextReducer';
 
 function App() {
   return (

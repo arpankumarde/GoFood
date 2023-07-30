@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import Card from '../components/Card'
+import { Navbar, Footer, Card } from '../components'
 
 export default function Home() {
     const [foodCat, setFoodCat] = useState([]);
@@ -30,7 +28,7 @@ export default function Home() {
         <div>
             <Navbar />
 
-            <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ objectFit: "cover !important" }}>
+            <div id="carouselFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ objectFit: "cover !important" }}>
                 <div className="carousel-inner" id="carousel">
                     <div className="carousel-caption" style={{ zIndex: "10" }}>
                         <div className="d-flex justify-content-center">
@@ -42,17 +40,20 @@ export default function Home() {
                         <img src="https://source.unsplash.com/random/900x700/?burger" className="d-block w-100" alt="Burger" style={{ filter: "brightness(30%)", objectFit: 'cover', objectPosition: 'bottom' }} />
                     </div>
                     <div className="carousel-item">
-                        <img src="https://source.unsplash.com/random/900x700/?pastry" className="d-block w-100" alt="Pastry" style={{ filter: "brightness(30%)", objectFit: 'cover', objectPosition: 'bottom' }} />
+                        <img src="https://source.unsplash.com/random/900x700/?ice-cream" className="d-block w-100" alt="Ice Cream" style={{ filter: "brightness(30%)", objectFit: 'cover', objectPosition: 'bottom' }} />
                     </div>
                     <div className="carousel-item">
-                        <img src="https://source.unsplash.com/random/900x700/?biriyani" className="d-block w-100" alt="Biriyani" style={{ filter: "brightness(30%)", objectFit: 'cover', objectPosition: 'bottom' }} />
+                        <img src="https://source.unsplash.com/random/900x700/?paneer" className="d-block w-100" alt="Paneer" style={{ filter: "brightness(30%)", objectFit: 'cover', objectPosition: 'bottom' }} />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://source.unsplash.com/random/900x700/?fried-rice" className="d-block w-100" alt="Fried Rice" style={{ filter: "brightness(30%)", objectFit: 'cover', objectPosition: 'bottom' }} />
                     </div>
                 </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <button className="carousel-control-prev" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Previous</span>
                 </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <button className="carousel-control-next" type="button" data-bs-target="#carouselFade" data-bs-slide="next">
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Next</span>
                 </button>
@@ -72,9 +73,7 @@ export default function Home() {
                                         .map((filterItem) => {
                                             return (
                                                 <div key={filterItem._id} className='col-12 col-md-6 col-lg-4'>
-                                                    <Card foodItem={filterItem}
-                                                        options={filterItem.options[0]}
-                                                    />
+                                                    <Card foodItem={filterItem} options={filterItem.options[0]} />
                                                 </div>
                                             )
                                         })

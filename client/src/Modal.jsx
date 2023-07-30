@@ -26,7 +26,7 @@ export default function Modal({ children, onClose }) {
     return ReactDom.createPortal(
         <>
             <div style={OVERLAY_STYLES} />
-            <div style={MODAL_STYLES}>
+            <div style={MODAL_STYLES} className='text-white'>
                 <button className='btn bg-danger fs-4' style={{ marginLeft: "90%", marginTop: "-35px" }} onClick={onClose}> X </button>
                 {children}
             </div>

@@ -1,0 +1,12 @@
+{
+  "name": "gofood",
+  "version": "1.0.0",
+  "description": "GoFood is a food ordering application built with the MERN Stack and styled with Bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server && nodemon"
+  },
+  "author": "",
+  "license": "ISC"
+}
