@@ -35,9 +35,9 @@ export default function MyOrder() {
                             data.orderData ?
                                 data.orderData.order_data.slice(0).reverse().map((item) => {
                                     return (
-                                        item.map((arrayData, key) => {
+                                        item.map((arrayData) => {
                                             return (
-                                                <div key={key}>
+                                                <>
                                                     {arrayData.Order_date ?
                                                         <div className='m-auto mt-5'>
                                                             {Order_date = arrayData.Order_date}
@@ -61,7 +61,7 @@ export default function MyOrder() {
                                                             </div>
                                                         </div>
                                                     }
-                                                </div>
+                                                </>
                                             )
                                         })
                                     )

@@ -63,7 +63,7 @@ export default function Home() {
                 {
                     foodCat !== [] ? foodCat.map((data) => {
                         return (
-                            <div className='row mb-3' key={data._id}>
+                            <div className='row' key={data._id}>
                                 <div key={data._id} className='fs-3 my-3'>
                                     {data.CategoryName}
                                 </div>

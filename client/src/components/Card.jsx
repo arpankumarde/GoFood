@@ -40,26 +40,29 @@ export default function Card(props) {
     }, [])
 
     return (
-        <div className="card mt-4" style={{ "width": "18rem", "maxHeight": "380px" }}>
+        <div className="card my-4 mx-auto" style={{ "width": "18rem", "maxHeight": "500px" }}>
             <img src={props.foodItem.img} className="card-img-top" alt={props.foodItem.name} style={{ height: '180px', objectFit: 'cover' }} />
             <div className="card-body">
                 <h5 className="card-title">{props.foodItem.name}</h5>
+                <p className="card-text">{props.foodItem.description}</p>
                 <div className="w-100 d-flex justify-content-between align-items-center">
-                    <div>
-                        <select name="" id="" className="m-1 h-100 bg-success rounded text-white px-1" onChange={(e) => setQty(e.target.value)}>
+                    <div className='d-flex gap-2'>
+                        <select name="quantity" className="h-100 bg-success rounded text-white px-1" onChange={(e) => setQty(e.target.value)}>
                             {Array.from(Array(6), (e, i) => {
                                 return (
                                     <option key={i + 1} value={i + 1}>{i + 1}</option>
                                 )
                             })}
                         </select>
-                        <select name="" className="m-1 h-100 bg-success rounded text-white text-capitalize px-1" ref={priceRef} onChange={(e) => setSize(e.target.value)}>
+                        <select name="size" className="h-100 bg-success rounded text-white text-capitalize px-1" ref={priceRef} onChange={(e) => setSize(e.target.value)}>
                             {priceOptions.map((data, key) => {
                                 return <option key={key} value={data}>{data}</option>
                             })}
                         </select>
                     </div>
-                    <div className="d-inline h-100 fs-5">₹{finalPrice}/-</div>
+                    <div className="d-inline h-100 fs-5">
+                        ₹{finalPrice}/-
+                    </div>
                 </div>
                 <hr />
                 <button type='button' className='btn btn-success justify-center' onClick={handleAddtocart}>Add to Cart</button>

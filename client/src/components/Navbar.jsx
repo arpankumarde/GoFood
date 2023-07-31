@@ -35,21 +35,21 @@ export default function Navbar() {
             }
           </ul>
           {(!localStorage.getItem('authToken')) ?
-            <div className='d-flex'>
-              <Link className="btn bg-white text-success mx-1" to="/login">Login</Link>
-              <Link className="btn bg-white text-success mx-1" to="/signup">Signup</Link>
+            <div className='d-flex gap-4'>
+              <Link className="btn bg-white text-success" to="/login">Login</Link>
+              <Link className="btn bg-white text-success" to="/signup">Signup</Link>
             </div>
             :
-            <>
-              <div className="btn bg-white text-success mx-1" onClick={() => setCartView(true)}>
+            <div className='d-flex gap-4'>
+              <div className="btn bg-white text-success" onClick={() => setCartView(true)}>
                 My Cart {" "}
                 {data.length ? <span className='bg-danger text-white px-2 py-1 rounded-circle'>{data.length <= 9 ? data.length : '9+'}</span> : null}
               </div>
               {cartView ? <Modal onClose={() => setCartView(false)} ><Cart /></Modal> : null}
-              <div className="btn bg-white text-danger mx-1" onClick={handleLogout}>
+              <div className="btn bg-white text-danger" onClick={handleLogout}>
                 Logout
               </div>
-            </>
+            </div>
           }
         </div>
       </div>
