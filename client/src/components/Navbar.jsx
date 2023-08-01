@@ -22,7 +22,7 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav me-auto mb-2">
+          <ul className="navbar-nav me-auto">
             <li className="nav-item">
               <Link className="nav-link active fs-5" aria-current="page" to="/">Home</Link>
             </li>
@@ -35,12 +35,12 @@ export default function Navbar() {
             }
           </ul>
           {(!localStorage.getItem('authToken')) ?
-            <div className='d-flex gap-4'>
+            <div className='d-flex gap-3'>
               <Link className="btn bg-white text-success" to="/login">Login</Link>
               <Link className="btn bg-white text-success" to="/signup">Signup</Link>
             </div>
             :
-            <div className='d-flex gap-4'>
+            <div className='d-flex gap-3'>
               <div className="btn bg-white text-success" onClick={() => setCartView(true)}>
                 My Cart {" "}
                 {data.length ? <span className='bg-danger text-white px-2 py-1 rounded-circle'>{data.length <= 9 ? data.length : '9+'}</span> : null}

@@ -39,22 +39,22 @@ export default function MyOrder() {
                                             return (
                                                 <>
                                                     {arrayData.Order_date ?
-                                                        <div className='m-auto mt-5'>
+                                                        <div className='m-auto mt-4'>
                                                             {Order_date = arrayData.Order_date}
                                                             <hr />
                                                         </div>
                                                         :
-                                                        <div className='col-12 col-md-6 col-lg-4' >
-                                                            <div className="card mt-3" style={{ width: "18rem", maxHeight: "360px" }}>
+                                                        <div className='col-12 col-md-6 col-lg-4'>
+                                                            <div className="card mt-2" style={{ width: "18rem", maxHeight: "360px" }}>
                                                                 {/* <img src={arrayData.img} className="card-img-top" alt={arrayData.name} style={{ height: "120px", objectFit: "fill" }} /> */}
                                                                 <div className="card-body">
                                                                     <h5 className="card-title">{arrayData.name}</h5>
-                                                                    <div className='container w-100 p-0' style={{ height: "38px" }}>
+                                                                    <div className='w-100' style={{ height: "40px" }}>
                                                                         <span className='m-1'>{arrayData.qty}</span>
                                                                         <span className='m-1'>{arrayData.size}</span>
-                                                                        <span className='m-1'>{Order_date}</span>
+                                                                        {/* <span className='m-1'>{Order_date}</span> */}
                                                                     </div>
-                                                                    <div className=' d-inline ms-2 h-100 w-20 fs-5' >
+                                                                    <div className='fs-5'>
                                                                         ₹{arrayData.price}/-
                                                                     </div>
                                                                 </div>
